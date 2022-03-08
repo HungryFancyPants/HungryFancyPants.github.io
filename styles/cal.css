@@ -1,0 +1,161 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: transparent;
+    color: red;
+    user-select: none;
+}
+
+.cal_container{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#mainHeading{
+    margin-bottom: 10vh;
+    transition: 1s;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.btn{
+    font-family: inherit;
+    width: 40%;
+    height: 10vh;
+    margin: 0.2vh auto;
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    transition: 500ms;
+}
+
+.btn:hover{
+    background-color: gray;
+    color: white;
+    width: 45%;
+}
+
+#hide{
+    display: none;
+}
+
+.homepagee{
+  border: 1px solid black;
+  color:white;
+  background-color: black;
+}
+.cal_container .a{
+  text-decoration: none;
+}
+
+.result_heading{
+    display: flex;
+    width: 29%;
+    height: auto;
+    justify-content: center;
+    background-color: black;
+    color:white;
+    border-radius: 20px;
+}
+
+input[type="number"]{
+    width: 60vw;
+    height: 100%;
+    border-radius: 10px 0px 0px 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    color: white;
+    font-size: 27px;
+    padding-left: 10vw;
+    font-family: inherit;
+}
+
+ .calculateBtn{
+    width: 25vw;
+    height: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: gray;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+ .disableBtn{
+    width: 15vw;
+    color: #fff;
+    font-size: 18px;
+    background-color: black;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: default;
+}
+
+.resultContainer{
+    text-align: center;
+    width: 39%;
+    margin: 4vh;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.resultContainer .resultBox{
+    width: 100%;
+    padding: 4%;
+    color: black;
+    border: 1px solid #151515;
+    border-radius: 1px;
+}
+
+
+
+.backBtn{
+    width: 20%;
+    height: 7vh;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    margin-top: 10vh;
+}
+
+.calculateBtn:hover, .backBtn:hover{
+    background-color: rgb(53, 238, 133);
+}
+
+
+@media all and (max-width: 600px){
+    .result_heading{
+        width: 95vw;
+    }
+    input[type="number"]{
+        font-size: 13px;
+    }
+    .result_heading .calculateBtn{
+        width: 25vw;
+        font-size: 13px;
+    }
+    .result_heading .disableBtn{
+        width: 15vw;
+        font-size: 13px;
+    }
+}
