@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="description" content="Basic CSS elements"/>
+	<meta name="keywords" content="HTML5, tags, CSS"/>
+	<meta name="author" content="Minhajul Hossain Moyeen"/>
+  <link href="styles/meatstyle.css" rel="stylesheet"/>
+  <link href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"  rel="stylesheet">
+  <script src="script.js"></script>
+  <script src="enhancements.js"></script>
+  <script src="cal_enhancements.js"></script>
+<title>Visit CUTLET to get fresh meat</title>
+</head>
+<body >
+
+<!-- header tag containing the logo and the navigation bar-->
+<header>
+    <h1 class="logo"><span class="kw" translate="no">CUTLET</span></h1>
+
+<!-- Navigation bar with nested unordered list to create a sub menu for products-->
+<!-- sub menu drop down list enhancement referred to youtube channel "Easy Tutorials" link:-https://www.youtube.com/watch?v=wHFflWvii3M&t=665s-->
+<nav>
+ <ul>
+    <li><a href="#" target="_blank">MEAT PRODUCTS</a>
+      <div class="sub_menu2">
+       <!--<ul>
+           <li><a href="product1(redmeats).html" target="_blank">Red Meat</a> &nbsp; <span class="bars"> | </span></li>
+           <li><a href="product2(bird).html" target="_blank">Bird Meat</a>  &nbsp; <span class="bars"> | </span></li>
+           <li><a href="product3(fish).html" target="_blank">Fish</a> &nbsp; <span class="bars"> | </span><br></li>
+           <li><a href="product4(exotic).html" target="_blank">Exotic Meat</a> &nbsp; <span class="bars"> |</span></li>
+       </ul>-->
+
+       <ul id="myList2" onchange="droplists1(x, y, a ,b)">
+
+            <script class="script_mod">
+            var x = "Red Meat";
+
+            var y = "Bird Meat";
+
+            var a = "Fish";
+
+            var b = "Exotic Meat";
+
+            var data = [x , y, a , b];
+
+
+            var resultx =  data[0].link("product1(redmeats).html");
+            var resulty =  data[1].link("product2(bird).html");
+            var resulta =  data[2].link("product3(fish).html");
+            var resultb =  data[3].link("product4(exotic).html");
+
+            document.getElementById("myList2").innerHTML = (resultx + resulty + resulta + resultb);
+             </script>
+       </ul>
+     </div>
+    </li>
+    <li><a href="enquiry.html" target="_blank">ASK US </a></li>
+    <li><a href="#" target="_blank">ENHANCEMENTS</a>
+      <div class="sub_menu2" onchange="droplists()">
+            <ul id="myList" onchange="droplists()">
+
+                 <script class="script_mod">
+
+                 var v = "Enhancements 1";
+
+                var w = "Enhancements 2";
+
+                 var data = [v , w];
+
+
+                 var resultv =  data[0].link("enhancements.html");
+                 var resultw =  data[1].link("enhancements2.html");
+
+                 document.getElementById("myList").innerHTML = (resultv + resultw);
+
+	                </script>
+            </ul>
+     </div>
+    </li>
+    <li><a href="aboutme.html" target="_blank">ABOUT US</a></li>
+    <li><a href="disclaimer.html" target="_blank">DISCLAIMER</a></li>
+  </ul>
+</nav>
+</header>
+
+
+<div class ="popup" >
+   <div class= "contentBox">
+     <div class ="cross_button"></div>
+      <div class= "imgbox">
+        <img src="images/butcher.png" alt="Promotion Pic">
+      </div>
+      <div class="announcement">
+        <div class="annun">
+          <h3><span> Venison </span><br>
+          Available Now </h3>
+          <h2>10<sup>%</sup><span>off</span></h2>
+          <p>For the first 20 customers</p>
+          <a href="product4(exotic).html">Get the Deal</a>
+        </div>
+      </div>
+  </div>
+</div>
+
+<script>
+
+
+const popup = document.querySelector('.popup');
+const close = document.querySelector('.cross_button');
+
+window.onload = function(){
+  setTimeout(function(){
+    popup.style.display="block";
+
+}, 2000)
+}
+
+close.addEventListener('click', () => {
+popup.style.display="none";
+
+})
+
+
+</script>
+
+
+<div class="button_12" >
+<button type="submit" class="button_21" name="button">Translate Website<br><span id="google_translate_element" onchange="googleTranslateElementInit()"></span></button>
+</div>
+
+
+
+
+
+
+
+<!--section for the body article(left float) and aside css table(right float)-->
+
+<section id="slideandtable">
+
+<article>
+  <div class="artimg">
+  <img src="images/1491764.jpg" alt="Fresh meats" id="img0"/>
+<!--image sourced from https://wallpaperaccess.com/seafood-->
+</div>
+  <div class="meat_knowledge">
+  <h2 id="indexh2" >Our Meat Theory</h2>
+  <p id="indexp">Based on our experience we present you the meat theory that will give u a better understanding on why should you buy fresh meats.The total meat experiene depends on different factors which controls the taste and the effect of meat on your body.We try to maintain those factors at <strong>BUTCHER</strong>.Factors you should consider before buying meat are:  </P>
+     <ol>
+       <li>Choose freshly butchered animal meat and avoid stored meat.</li>
+       <li>Choose grass fed animal or free ranged bird meat.</li>
+       <li>Check the freshness of fish and if it's sashimi grade.</li>
+       <li>Avoid buginh processed meat products</li>
+       <li>Choose met products only after knowing how they are made</li>
+     </ol>
+</div>
+</article> <br>
+
+
+
+<aside id="sidetable">
+
+
+
+<div class="table-box">
+  <div class="table-head">
+    <div class="table-cell first-cell">
+          <p>Important Information</p>
+    </div>
+    <div class="table-cell">
+          <p>Details</p>
+    </div>
+    <div class="table-cell last-cell">
+        <p>Available</p>
+    </div>
+    </div>
+
+
+<div class="table-row">
+    <div class="table-cell first-cell">
+       <p>Saturday -Thursday (Business hours)</p>
+    </div>
+    <div class="table-cell">
+       <p>7am -5pm</p>
+    </div>
+    <div class="table-cell last-cell">
+      <p>-</p>
+    </div>
+</div>
+
+<div class="table-row">
+    <div class="table-cell first-cell">
+       <p>Friday</p>
+    </div>
+    <div class="table-cell">
+       <p>7am-12pm<br>3pm-5pm</p>
+    </div>
+    <div class="table-cell last-cell">
+        <p>-</p>
+    </div>
+</div>
+
+<div class="table-row">
+    <div class="table-cell first-cell">
+       <p>Exotic Meat Available</p>
+    </div>
+    <div class="table-cell">
+       <p>Black Chicken and King Crab</p>
+    </div>
+    <div class="table-cell last-cell">
+      <p>Whole Year</p>
+    </div>
+</div>
+
+<div class="table-row">
+    <div class="table-cell first-cell">
+       <p>Exotic Meat Available</p>
+    </div>
+    <div class="table-cell">
+       <p>Rabbits</p>
+    </div>
+    <div class="table-cell last-cell">
+      <p>First two weeks every month</p>
+    </div>
+</div>
+
+<div class="table-row">
+    <div class="table-cell first-cell">
+       <p>Exotic Meat Available</p>
+    </div>
+    <div class="table-cell">
+       <p>Venison</p>
+    </div>
+    <div class="table-cell last-cell">
+      <p>October - April</p>
+    </div>
+</div>
+</div>
+</aside>
+</section>
+
+
+<!--section to contain the images for the slide show-->
+<!--Enhancement reference: Youtube channel: "Web Decorator" link: "https://www.youtube.com/watch?v=z74ExMz-cWU&t=1s"-->
+<section>
+  <div class="container">
+
+    <input type="radio" id="i1" name="images" checked />
+    <input type="radio" id="i2" name="images" />
+    <input type="radio" id="i3" name="images" />
+    <input type="radio" id="i4" name="images" />
+    <input type="radio" id="i5" name="images" />
+
+    <div class="slide_img" id="one">
+
+        <img src="images/half-cow-chunks-fresh-hung-beef-2.jpg " alt="Fresh beef">
+<!--image sourced from: https://i2.wp.com/southeastagnet.com/wp-content/uploads/2017/06/half-cow-chunks-fresh-hung-beef-2.jpg?resize=742%2C495-->
+          <label class="prev" for="i1"><span>&#x2039;</span></label>
+          <label class="next" for="i3"><span>&#x203a;</span></label>
+
+    </div>
+
+    <div class="slide_img" id="two">
+
+        <img src="images/Eco-crass-fed-beef.jpg" alt="Grass fed cows">
+<!--image sourced from:https://nordefood.eu/wp-content/uploads/2020/08/Eco-crass-fed-beef.jpg-->
+          <label class="prev" for="i5"><span>&#x2039;</span></label>
+          <label class="next" for="i2"><span>&#x203a;</span></label>
+
+    </div>
+
+    <div class="slide_img" id="three">
+        <img src="images/itl.cat_meat-wallpaper_1739766.png" alt="Fresh meats">
+<!--image sourced from:https://www.itl.cat/pngfile/big/173-1739766_meat-wallpaper.jpg-->
+          <label class="prev" for="i2"><span>&#x2039;</span></label>
+          <label class="next" for="i4"><span>&#x203a;</span></label>
+    </div>
+
+    <div class="slide_img" id="four">
+        <img src="images/chinese-seafood-market.jpg" alt="Fresh fish">
+<!--image sourced from: https://images.thefishsite.com/fish/articles/asia/chinese-seafood-market.jpeg?profile=article-inline@tablet-->
+          <label class="prev" for="i3"><span>&#x2039;</span></label>
+          <label class="next" for="i5"><span>&#x203a;</span></label>
+    </div>
+
+    <div class="slide_img" id="five">
+        <img src="images/whole_chicken_2.jpg" alt="Fresh chicken">
+<!--image sourced from: https://apmeats.co.uk/pub/media/catalog/product/cache/8fbab15fb93528096337e3b010f3f1e6/w/h/whole_chicken_2.jpg-->
+          <label class="prev" for="i4"><span>&#x2039;</span></label>
+          <label class="next" for="i1"><span>&#x203a;</span></label>
+
+    </div>
+
+    <div id="nav_slide">
+      <label for="i1" class="dots" id="dot1"></label>
+      <label for="i2" class="dots" id="dot2"></label>
+      <label for="i3" class="dots" id="dot3"></label>
+      <label for="i4" class="dots" id="dot4"></label>
+      <label for="i5" class="dots" id="dot5"></label>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+<!--section for the FAQ and answer drop down table-->
+
+<section class="faqsection">
+  <div class="box">
+<p class="heading">FAQs</p>
+<div class="faqs">
+  <details>
+     <summary>What is <strong>CUTLET</strong>?</summary>
+     <p class="anstext"><strong>CUTLET</strong> is a modern butcher shop with a dream to provide our customers the best meat experiences.Our footsteps started from <em>2019</em> and ever since we are spreading the love with good quality meats.The owner started this dream after he realised most of the people are getting frozen and processed meat. The owner grew up in country where meat freshly cut and sold 90% of the time, for the frozen and processed meat experience was not good enough.So, he started with a goal to let people know how the freshness of the meat affects the taste.</p>
+  </details>
+  <details>
+     <summary>Why are you called <strong>CUTLET</strong>?</summary>
+     <p class="anstext">As it is a butcher shop we thought of a name that will emphasis on what we sell and the same time it will attract people.Thus we came up with the name <strong>CUTLET</strong> which refers to meat chop.</p>
+  </details>
+  <details>
+     <summary>Are the meat products halal?</summary>
+     <p class="anstext">Yes, all of our products are butchered in <strong>Halal(permissible)</strong> way to ensure the halal meat and we are halal certified by the <em>Malaysian Halal Certification Authority</em>.</p>
+  </details>
+  <details>
+     <summary>Where is your shop?</summary>
+     <p class="anstext">Click on this icon to find us on google maps <a href="#maps"><img src="images/map.png" alt="Map link"/></a></p>
+  </details>
+  <details>
+     <summary>How much is the shipping charge?</summary>
+     <p class="anstext"> The details re given below:</p>
+    <ol>
+       <li>The shipping charge is free for the areas between the 1km of our shop radius. </li>
+       <li>The shipping charge is free for any amount of purchase above Rm. 1000 inside kuching.</li>
+       <li>The shipping charge is RM. 25 for any amount of purchase below Rm. 1000 inside kuching.</li>
+       <li>The shipping charge is RM. 120 for upto the purchase of Rm. 2000 outside kuching (after that for per kilo extra charge of RM.10 will be added).</li>
+     </ol>
+  </details>
+  <details>
+     <summary>How to order online?</summary>
+     <p class="anstext">Contact us <a href="#contact_order">Here</a> or submit a form with your order description from <a href="enquiry.html">Here</a></p>
+  </details>
+  <details>
+     <summary>Is the exotic meat available all the time?</summary>
+     <p class="anstext">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </details>
+  <details>
+     <summary>Do we need to pay for grounding our meat?</summary>
+     <p class="anstext">No extra charge is added for grounding or mincing the meat.</p>
+  </details>
+</div>
+</div>
+</section>
+
+
+
+<section class="sidetable2">
+
+
+
+  <table class="table-box">
+
+    <caption class="tablecap">Event Updating Table</caption>
+
+    <tr class="table-head">
+      <th class="table-cell first-cell">
+            <p id="table_offer">Our Upcoming Events</p>
+      </th>
+    </tr>
+
+    <tr class="table-row">
+        <td class="table-cell ">
+           <p>Saturday - Monday (Business hours)</p>
+        </td>
+        <td class="table-cell">
+           <p> 15&#37; Discount On All Bird Meat</p>
+        </td>
+    </tr>
+
+  <tr class="table-row">
+    <td class="table-cell">
+       <p>Tuesday - Wednesday (Depends on Stock)</p>
+    </td>
+    <td class="table-cell">
+       <p>20&#37; Discount on Rabbit Meat </p>
+    </td>
+  </tr>
+
+  <tr class="table-row">
+    <td class="table-cell ">
+      <p>Thursday - Saturday (With every purchase)</p>
+    </td>
+    <td class="table-cell">
+       <p>Free 150g of Fresh Suasage</p>
+    </td>
+  </tr>
+
+  </table>
+
+
+</section>
+
+
+<!--footer-->
+
+<footer>
+
+  <a href="index.html" title="Our Homepage"><h1 class="logo"><span class="kw" translate="no">CUTLET</span></h1></a>
+
+  <div class="details" id="contact_order">
+
+  <div class="footer_menu">
+
+    <ul>
+			<li><strong class="minimenu"><span class="kw" translate="no">CUTLET</span></strong></li>
+			<li><a href="index.html" class="flinks">Home Page</a></li>
+			<li><a href="enquiry.html" class="flinks">Enquiries</a></li>
+			<li><a href="disclaimer.html" class="flinks">Disclaimer</a></li>
+			<li><a href="enhancements.html" class="flinks">Enhancements</a></li>
+		</ul>
+
+		<ul>
+			<li><strong class="minimenu">Products</strong></li>
+			<li><a href="product1(redmeats).html" class="flinks">Red Meats</a></li>
+			<li><a href="product2(bird).html" class="flinks">Bird Meats</a></li>
+			<li><a href="product3(fish).html" class="flinks">Fish</a></li>
+			<li><a href="product4(exotic).html" class="flinks">Exotic Meats</a></li>
+		</ul>
+
+		<ul>
+			<li> <strong class="minimenu">About Us</strong> </li>
+      <li> <a href="aboutme.html" class="flinks">Author's Detail</a><br><br><br></li>
+		</ul>
+
+
+	</div>
+
+  <h2>Contact Us</h2>
+  <!--Contact details, icon download- https://www.flaticon.com/ -->
+  <p><a href="https://www.facebook.com/CutLet-100551645477090" target="_blank"><img src="images/facebook_icon.png" title="Visit Us on Facebook" alt="Our Facebook Link"/></a> &nbsp;
+     <a href="https://wa.me/qr/74LHPZBMWYZ6K1" target="_blank"><img src="images/whatsapp_icon.png" alt="Our whatsapp number" title="Contact Us on Whatsapp"/></a> &nbsp;
+     <a href="mailto:101230484@students.swinburne.edu.my" target="_blank"><img src="images/gmail.png" alt="Our gmail address" height="48" width="44" title="Contact Us via Email" /></a> &nbsp;
+     <a href="https://www.instagram.com/CutLet-100551645477090" target="_blank"><img src="images/instagram_icon.png" alt="Our Instagram Link" title="check Us on Instagram"/></a></p> &nbsp;
+     <img src="images/halal.png" title="WE ARE 100% HALAL" alt="Halal Products" height="48" width="44"/> &nbsp;
+  </div>
+
+<!--Enhancement Google map tab linking referred to Youtube Channel:- "Geek Tutorials" link:- https://www.youtube.com/watch?v=KIC0OK9nKXY -->
+  <div class="mapping" id="maps">
+    <h2>Our Address:</h2>
+    <p>296, Lorong Tabuan Dayak 6, King Centre, 93350, Kuching, Sarawak.</p>
+    <p>Or click below...</p>
+    <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.4026724120695!2d110.35643741457282!3d1.5263408988868885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31fba70d915f6b2f%3A0x4a6fa38ac11b2e5b!2s296%2C%20Lorong%20Tabuan%20Dayak%206%2C%20King%20Centre%2C%2093350%20Kuching%2C%20Sarawak!5e0!3m2!1sen!2smy!4v1617047646830!5m2!1sen!2smy" height="300"  loading="eager" ></iframe></p>
+  </div>
+
+  <div class="footer_acknowledgement">
+    <h3> Acknowledgements </h3>
+    <p> CUTLET would like to acknowledge the content usage from </p>
+    <a href="https://use.fontawesome.com/releases/v5.4.1/css/all.css " target="new_window" title="Click to visit their website" class="flinks"> Fontawesome</a> |
+    <a href="https://www.youtube.com/watch?v=wHFflWvii3M&t=665s " target="new_window" title="Click to visit their website" class="flinks"> Easy Tutorials Youtube</a> |
+    <a href="https://wallpaperaccess.com/seafood " target="new_window" title="Click to visit their website" class="flinks"> Wallpaperaccess</a> |
+    <a href="https://nordefood.eu/wp-content/uploads/2020/08/Eco-crass-fed-beef.jpg " target="new_window" title="Click to visit their website" class="flinks"> Norde Food</a> |
+    <a href="https://www.youtube.com/watch?v=z74ExMz-cWU&t=1s " target="new_window" title="Click to visit their website" class="flinks"> Web Decorator Youtube</a> |
+    <a href="https://i2.wp.com/southeastagnet.com/wp-content/uploads/2017/06/half-cow-chunks-fresh-hung-beef-2.jpg?resize=742%2C495 " target="new_window" title="Click to visit their website" class="flinks">Southeast Ag Net</a> |
+    <a href=":https://www.itl.cat/pngfile/big/173-1739766_meat-wallpaper.jpg " target="new_window" title="Click to visit their website" class="flinks"> Itl Cat</a> |
+    <a href="https://images.thefishsite.com/fish/articles/asia/chinese-seafood-market.jpeg?profile=article-inline@tablet" target="new_window" title="Click to visit their website" class="flinks">TheFishSite</a> |
+    <a href="https://apmeats.co.uk/pub/media/catalog/product/cache/8fbab15fb93528096337e3b010f3f1e6/w/h/whole_chicken_2.jpg" target="new_window" title="Click to visit their website" class="flinks"> ApMeats</a> |
+    <a href="https://www.flaticon.com/" target="new_window" title="Click to visit their website" class="flinks">FlatIcon</a> |
+    <a href="https://www.youtube.com/watch?v=KIC0OK9nKXY " target="new_window" title="Click to visit their website" class="flinks"> Geek Tutorials Youtube</a>
+  </div>
+
+
+	<p class="footer_credit">  Est. 2021 | Copyright &#169; CUTLET Butchery Co. |Email: <a href="mailto:101226535@students.swinburne.edu.my" class="ext_link" title="Email Dexter Ho"> 101230484@students.swinburne.edu.my</a> </p>
+
+  <div id="iconcredit">©Icons made by <a href="https://www.flaticon.com/authors/dinosoftlabs" title="DinosoftLabs">DinosoftLabs</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+</footer>
+<!-- Enhancement scroll up button Youtube Channel:- "DarkCode" link:- https://www.youtube.com/watch?v=Vef9bxTilCU -->
+<div class="scrollbtn">
+<a href="#"> <i class="fas fa-arrow-up"></i> </a>
+</div>
+</body>
+</html>
